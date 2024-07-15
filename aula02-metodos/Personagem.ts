@@ -39,8 +39,8 @@ export class Personagem {
     }
   }
 
-  descansar(): void {
-    this.energia += Math.random() * 10;
+  descansar(horas: number): void {
+    this.energia += horas * Math.random() * 10;
     if (this.energia > 100) {
       this.energia = 100;
     }
@@ -53,10 +53,8 @@ export class Personagem {
   }
 
   isDead(): boolean {
-    if (this.energia < 0) {
-      return true;
-    } else {
-      return false;
-    }
+    return this.energia < 0;
   }
 }
+
+console.log("Você morreu");

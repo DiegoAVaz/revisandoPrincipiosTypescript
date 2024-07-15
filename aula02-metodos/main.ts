@@ -28,7 +28,8 @@ while (option != 9 || person.isDead()) {
       console.log(person.showStatus());
       break;
     case 3:
-      person.descansar();
+      let horas: number = +teclado("Quantas horas de descanso? ");
+      person.descansar(horas);
       console.log(person.showStatus());
       break;
     case 4:
